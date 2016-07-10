@@ -85,14 +85,14 @@ url_array.each do |value|		#Cycle through all the entries
 			element=driver.find_element(:id, "username")
 			element if element.displayed?
 		end
-		user_name.send_keys "axomic"
+		user_name.send_keys "--axomic--"
 
 		#Enter the Password
 		password = wait.until do
 			element=driver.find_element(:id, "password")
 			element if element.displayed?
 		end
-		password.send_keys "ValThorens3200"
+		password.send_keys "--Password--"
 		 
 		 
 		#Clicking on the Submit Button
