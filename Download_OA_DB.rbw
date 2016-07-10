@@ -57,9 +57,10 @@ url_array=data.split("\n")
 #Firefox browser profile instantiation
 profile = Selenium::WebDriver::Firefox::Profile.new
 
-profile["browser.download.folderList"] = 2
-profile["browser.download.dir"] = 'C:\\cat'
-profile["browser.helperApps.neverAsk.saveToDisk"] = 'application/zip'
+#Modify the firefox browser profile
+profile["browser.download.folderList"] = 2  #Allows us to set the default directory for downloads
+profile["browser.download.dir"] = 'C:\\cat' #Set the default downloads directory
+profile["browser.helperApps.neverAsk.saveToDisk"] = 'application/zip' #Bypass that pesky download confirmation dialog box
 
 #Firefox browser object
 driver = Selenium::WebDriver.for :firefox, :profile => profile
