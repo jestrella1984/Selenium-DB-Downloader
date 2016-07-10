@@ -16,7 +16,6 @@ a folder located at C:\cat
 
 
 require "selenium-webdriver"
-require "mechanize"
 require "certified"
 require "net/http"
 require "set"
@@ -69,8 +68,6 @@ wait = Selenium::WebDriver::Wait.new(:timeout => 15)
 driver.manage.timeouts.implicit_wait = 20 # seconds 
 
 
-a=Mechanize.new					#This object will let us check if a url is accessible
-
 url_array.each do |value|		#Cycle through all the entries
 
 	client_url=value+'/Page/Backup'
@@ -103,14 +100,14 @@ url_array.each do |value|		#Cycle through all the entries
 			element if element.displayed?
 		end
 		submit_button.click
-=begin		
+		
 		#Backup the datbase
 		backup_db_button = wait.until do
 			element=driver.find_element(:link_text, 'Backup Database Now')
 			element if element.displayed?
 		end
 		backup_db_button.click
-=end		
+		
 		#Download the datbase
 		download_button = wait.until do
 			element=driver.find_element(:class, "inlineLink")
