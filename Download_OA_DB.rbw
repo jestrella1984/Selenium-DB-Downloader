@@ -85,7 +85,7 @@ url_array.each do |value|		#Cycle through all the entries
 			element=driver.find_element(:id, "username")
 			element if element.displayed?
 		end
-		user_name.send_keys "--axomic--"
+		user_name.send_keys "--username--"
 
 		#Enter the Password
 		password = wait.until do
