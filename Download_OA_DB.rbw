@@ -1,6 +1,6 @@
 =begin
 
-Author: Juan Estrella
+Authors: Juan Estrella and Fausto Papayano
 Created: 7/9/2016
 Version: 1.0.0
 
